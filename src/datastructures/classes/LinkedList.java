@@ -144,6 +144,22 @@ public class LinkedList {
 
         length ++;
     }
+
+    public Node removeFirst(){
+        if (length == 0) {
+            return null;
+        }else {
+            Node temp = head;// create a temp node to hold the first node
+            head = head.next;
+            temp.next = null; // detatch it from the linked list
+            length --;
+
+            if (length == 0) { //remove tail for edge case where list has one value
+                tail = null;
+            }
+            return temp; // return node we removed
+        }
+    }
 }
 
 

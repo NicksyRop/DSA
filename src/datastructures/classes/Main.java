@@ -22,6 +22,9 @@ public class Main {
 
         //todo: prepend
         linkedList.prepend(1);
+
+        //todo: remove first [ prints 2, 3 ]
+        linkedList.removeFirst();
         linkedList.printList();
     }
 }
