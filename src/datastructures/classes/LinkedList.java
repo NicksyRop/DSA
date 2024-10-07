@@ -130,6 +130,20 @@ public class LinkedList {
 
         return temp; // returns the value removed
     }
+
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        //todo: check for the first edge case if list is null
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        }else{
+          newNode.next = head; // make new node point to head
+          head = newNode;
+        }
+
+        length ++;
+    }
 }
 
 
