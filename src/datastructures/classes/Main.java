@@ -25,6 +25,10 @@ public class Main {
 
         //todo: remove first [ prints 2, 3 ]
         linkedList.removeFirst();
+
+        //todo: print the first index
+        System.out.println("index zero " + linkedList.get(0).value);
         linkedList.printList();
+
     }
 }

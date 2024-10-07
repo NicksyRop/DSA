@@ -160,6 +160,19 @@ public class LinkedList {
             return temp; // return node we removed
         }
     }
+
+    public Node get(int index){
+        if( index < 0 || index >=  length ) { // indexes start from zero
+            return null;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+
+    }
 }
 
 
