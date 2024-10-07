@@ -60,6 +60,8 @@ public class LinkedList {
         return length;
     }
 
+    //create a temp var that points to the head
+    //loop through it ( stops when tail.next  is null
     public void printList() {
         Node temp = head;
         while (temp != null) {
@@ -85,6 +87,49 @@ public class LinkedList {
         }
     }
 
+    //adds a node to the last part
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        }else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length ++;
+    }
+
+
+    public Node removeLast() {
+        //edge cases -> empty list or LinkedList lenth == 1
+        if(length == 0) { // ypu can also test with head/tail being null
+            return null;
+        }
+        //initialize two pointers to keep track of two subsequent nodes as we loop
+        Node temp = head; // value to be removed
+        Node prev = head; // value that becomes the tails
+
+        //todo : this length == 1 edge case wont run this loop and will be catered for in the code after
+        // while loop
+        while (temp.next != null) { // this loop stop when we arrive at the last node i.e when temp.next is null
+            prev = temp;
+            temp = temp.next;
+        }
+        tail = prev; // set value before tail to be tail (removes the last node)
+        tail.next = null; // set next value as null
+        length --;
+
+        //this means the head and tail still points to node
+        // checks for when Linked list has one value
+        if (length == 0) {
+            head = null;
+            tail = null;
+
+        }
+
+        return temp; // returns the value removed
+    }
 }
 
 

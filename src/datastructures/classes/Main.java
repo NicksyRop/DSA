@@ -7,10 +7,17 @@ public class Main {
         Cookie cookie2 = new Cookie("Blue");
         cookie2.setColor("green");
 
-
-        System.out.println(cookie1.getColor());
-        System.out.println(cookie2.getColor());
+       // System.out.println(cookie1.getColor());
+      //  System.out.println(cookie2.getColor());
 
         LinkedList linkedList = new LinkedList(4);
+        linkedList.append(3);
+       // System.out.println("Head " +  linkedList.getHead().value);
+      //  System.out.println("Tail " + linkedList.getTail().value);
+        linkedList.printList();
+        //todo : we have two items in the node (remove last three times) [4,3]
+        System.out.println(linkedList.removeLast().value); // returns the value  3
+        System.out.println(linkedList.removeLast()); // returns a node
+        System.out.println(linkedList.removeLast()); // todo returns null (first edge case)
     }
 }
