@@ -131,7 +131,7 @@ public class LinkedList {
         return temp; // returns the value removed
     }
 
-    public void prepend(int value) {
+        public void prepend(int value) {
         Node newNode = new Node(value);
         //todo: check for the first edge case if list is null
         if (length == 0) {
@@ -173,6 +173,66 @@ public class LinkedList {
         return temp;
 
     }
+    //Replace a node with a new value
+    public boolean set(int index, int value) {
+        //todo:use the get method to find the node then update values
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
+
+    public  boolean insert(int index, int value) {
+        if( index < 0 || index > length) {
+            return false;
+        }
+
+        //prepend if index == 0
+        if( index == 0) {
+            prepend(value);
+            return true;
+        }
+        //append
+        if (index == length -1) {
+            append(value);
+            return true;
+        }
+
+        Node newNode = new Node(value);
+        Node temp  = get(index -1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+
+    }
+
+    public Node remove(int index){
+        if(index < 0 || index >= length){ //check for index out of range
+            return null;
+        }
+
+        if (index == 0) {
+            return removeFirst();
+        }
+
+        if (index == length -1) {
+            return removeLast();
+        }
+
+        //to remove node in the middle of a linked list
+        // we need to var one pointing at the index (temp) and one one a node before it (prev)
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
 }
 
 

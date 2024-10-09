@@ -12,6 +12,7 @@ public class Main {
 
         LinkedList linkedList = new LinkedList(2);
         linkedList.append(3);
+        linkedList.append(5);
        // System.out.println("Head " +  linkedList.getHead().value);
       //  System.out.println("Tail " + linkedList.getTail().value);
 
@@ -25,6 +26,15 @@ public class Main {
 
         //todo: remove first [ prints 2, 3 ]
         linkedList.removeFirst();
+
+        //todo: insert
+        linkedList.set(0,3);
+
+        //todo: insert
+        linkedList.insert(2,6);
+
+        //todo: remove
+        linkedList.remove(2);
 
         //todo: print the first index
         System.out.println("index zero " + linkedList.get(0).value);
