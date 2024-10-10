@@ -49,8 +49,9 @@ public class Main {
         Stack myStack = new Stack(4);
         myStack.getHeight();
         myStack.getTop();
+        //todo: push a node to a stack
+        myStack.push(3);
         myStack.printStack();
-
 
     }
 }
