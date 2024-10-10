@@ -46,5 +46,11 @@ public class Main {
         linkedList.printList();
 
 
+        Stack myStack = new Stack(4);
+        myStack.getHeight();
+        myStack.getTop();
+        myStack.printStack();
+
+
     }
 }
