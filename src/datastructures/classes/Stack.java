@@ -3,6 +3,7 @@ package datastructures.classes;
 /**
  * @author nnkipkorir
  * created 10/10/2024
+ * Stack we pop and pull ( first node )
  */
 
 public class Stack {

@@ -59,10 +59,13 @@ public class Main {
 
         Queue queue = new Queue(4);
         System.out.println("queue");
+        //todo: removes the last node
         queue.enqueue(5);
-        queue.getLast();
-        queue.getFirst();
-        queue.length();
+        //todo: removes the first node
+        queue.dequeue();
+//        queue.getLast();
+//        queue.getFirst();
+        queue.print();
 
 
     }
