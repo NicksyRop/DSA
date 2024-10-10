@@ -51,6 +51,9 @@ public class Main {
         myStack.getTop();
         //todo: push a node to a stack
         myStack.push(3);
+        myStack.push(5);
+        myStack.push(1);
+        myStack.pop();
         myStack.printStack();
 
     }
