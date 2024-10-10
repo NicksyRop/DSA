@@ -201,7 +201,7 @@ public class LinkedList {
         }
 
         Node newNode = new Node(value);
-        Node temp  = get(index -1);
+        Node temp  = get(index -1); // get node before insertion
         newNode.next = temp.next;
         temp.next = newNode;
         length++;
