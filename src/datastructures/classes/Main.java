@@ -56,5 +56,14 @@ public class Main {
         myStack.pop();
         myStack.printStack();
 
+
+        Queue queue = new Queue(4);
+        System.out.println("queue");
+        queue.enqueue(5);
+        queue.getLast();
+        queue.getFirst();
+        queue.length();
+
+
     }
 }
