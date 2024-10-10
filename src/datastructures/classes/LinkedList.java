@@ -242,7 +242,7 @@ public class LinkedList {
         Node before = null;
 
         for (int i=0; i < length; i++) { //todo (this will keep reversing how the nodes are pointed to
-            after = after.next;
+            after = temp.next;
             temp.next = before;
             before = temp;
             temp = after;

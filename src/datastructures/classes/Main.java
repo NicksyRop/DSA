@@ -40,5 +40,11 @@ public class Main {
         System.out.println("index zero " + linkedList.get(0).value);
         linkedList.printList();
 
+        //todo: reverse a linked list
+        linkedList.reverse();
+        System.out.println("Reverse");
+        linkedList.printList();
+
+
     }
 }
