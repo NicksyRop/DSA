@@ -233,6 +233,22 @@ public class LinkedList {
         return temp;
     }
 
+    public void reverse(){
+        Node temp = head; //create a temp to point to head then swap values i.e head to be to tail and tail to be temp
+        head = tail;
+        tail = temp;
+        //todo create three variables one pointing at value after temp and before (null)  so we swap values
+        Node after = temp.next;
+        Node before = null;
+
+        for (int i=0; i < length; i++) { //todo (this will keep reversing how the nodes are pointed to
+            after = after.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
 }
 
 
