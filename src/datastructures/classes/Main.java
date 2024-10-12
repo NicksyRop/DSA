@@ -76,6 +76,7 @@ public class Main {
         bst.insert(82);
         bst.insert(27);
         System.out.println("value at is :" + bst.root.left.right.value);
+        System.out.println("Contains value  21 ? " + bst.contains(21));
 
 
     }
