@@ -18,6 +18,28 @@ public class BinarySearchTree {
         }
     }
 
+    public boolean contains(int value) {
+        //todo: the line below is not necessary since , the first step in the while checks for this and iuf true the loop will stop running and we return false
+        if(root == null){ //return false if tree has no values
+            return false;
+        }
+        //creat a temp variable equal to root initially
+        Node temp = root;
+        while (temp != null) {
+            if(value < temp.value) { //go left if value is less than temp
+                temp = temp.left; //todo: if true the while loop will run again after updating temp
+
+            }else if(value > temp.value) {//go right if value is greater
+                temp = temp.left;
+
+            }else { // when the while loop run and finds temp equal to value it returns true
+                return true; //return true this means the values are equal
+            }
+        }
+        return false; //todo (if we break out of the will loop
+                      //todo:  ( we have traversed and not found the value , we will  break out of the loop) return false
+    }
+
     public boolean insert(int value) {
         Node newNode = new Node(value);
         if (root == null) {
