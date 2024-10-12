@@ -67,6 +67,16 @@ public class Main {
 //        queue.getFirst();
         queue.print();
 
+        System.out.println("Binary search tree");
+        BinarySearchTree bst = new BinarySearchTree();
+        bst.insert(47);
+        bst.insert(21);
+        bst.insert(18);
+        bst.insert(52);
+        bst.insert(82);
+        bst.insert(27);
+        System.out.println("value at is :" + bst.root.left.right.value);
+
 
     }
 }
