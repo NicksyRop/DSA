@@ -105,6 +105,11 @@ public class Main {
         int myf = factorial(4);
         System.out.println(myf);
 
+        System.out.println("Graphs");
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.printGraph();
+
 
     }
 }
