@@ -110,9 +110,10 @@ public class Main {
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge("A","B");
-        graph.removeEdge("A","B");
+        //todo : remove edge
+       // graph.removeEdge("A","B");
+        //todo:remove vertex
+        graph.removeVertex("B");
         graph.printGraph();
-
-
     }
 }

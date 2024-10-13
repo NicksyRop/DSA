@@ -44,5 +44,37 @@ public class Graph {
         return false;
     }
 
+    //todo: first get the vertices that are lonked to the vertex [ all of them will have edges connected to the vertex
+    //hence we can loop as we remove
+    /*
+    {
+        // Node "A" is connected to "B" and "C"
+        "A": ["B", "C"],
+
+        // Node "B" is connected to "A"
+        "B": ["A"],
+
+        // Node "C" is connected to "A"
+        "C": ["A"],
+
+        // Node "D" is connected to "A", "B", and "C"
+        "D": ["A", "B", "C"]
+    }
+     */
+
+    //if we want to remove D , we sure know that it has vertex ABC connected to it
+    //so we will loop as we delete the vertex before removing D
+    public boolean removeVertex(String vertex) {
+        //check if vertex is in the graph
+        if(adjacencyList.get(vertex) == null) {
+            return false;
+        }
+
+        for(String otherVetex : adjacencyList.get(vertex)) { //loop through the array list of D
+            adjacencyList.get(otherVetex).remove(vertex); //remove the edges linked to it
+        }
+        adjacencyList.remove(vertex); // remove the vertex from the hashmap
+        return true;
+    }
 
 }
