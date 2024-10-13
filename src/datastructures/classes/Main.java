@@ -110,6 +110,7 @@ public class Main {
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge("A","B");
+        graph.removeEdge("A","B");
         graph.printGraph();
 
 
