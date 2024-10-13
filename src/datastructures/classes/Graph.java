@@ -24,4 +24,14 @@ public class Graph {
         }
         return false;
     }
+
+    public boolean addEdge(String vertex1, String vertex2) {
+        //first check if the vertices exist
+        if(adjacencyList.get(vertex1) != null && adjacencyList.get(vertex2)!=null) {
+            adjacencyList.get(vertex1).add(vertex2); // this will return the array list i.e empty if not linked  [] and add the new vertex
+            adjacencyList.get(vertex2).add(vertex1);
+            return true;
+        }
+        return false;
+    }
 }
