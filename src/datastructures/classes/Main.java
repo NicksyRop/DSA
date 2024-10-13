@@ -1,6 +1,25 @@
 package datastructures.classes;
 
 public class Main {
+    public static void methodThree(){
+        System.out.println("Three");
+    }
+    public static void methodTwo(){
+        methodThree();
+        System.out.println("Two");
+    }
+    public static void methodOne(){
+        methodTwo();
+        System.out.println("One");
+    }
+
+    public static int factorial(int n){
+        if(n == 1){ //base case - where function call stops
+            return 1;
+        }
+        return n * factorial(n-1);
+    }
+
     public static void main(String[] args) {
 
         Cookie cookie1 = new Cookie("Green");
@@ -77,6 +96,14 @@ public class Main {
         bst.insert(27);
         System.out.println("value at is :" + bst.root.left.right.value);
         System.out.println("Contains value  21 ? " + bst.contains(21));
+
+
+        System.out.println("call stack output");
+        methodOne();
+
+        System.out.println("Factorial");
+        int myf = factorial(4);
+        System.out.println(myf);
 
 
     }
