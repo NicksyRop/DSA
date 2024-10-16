@@ -1,5 +1,7 @@
 package datastructures.classes;
 
+import java.util.Hashtable;
+
 public class Main {
     public static void methodThree(){
         System.out.println("Three");
@@ -115,5 +117,17 @@ public class Main {
         //todo:remove vertex
         graph.removeVertex("B");
         graph.printGraph();
-    }
+        System.out.println("Hashtable");
+        Hashtable ht = new Hashtable();
+
+        System.out.println("Heap");
+        Heap heap = new Heap();
+        heap.insert(99);
+        heap.insert(72);
+        heap.insert(61);
+        heap.insert(58);
+        System.out.println(heap.getHeap());
+        heap.insert(120);
+        System.out.println(heap.getHeap());
+        }
 }
