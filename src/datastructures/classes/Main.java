@@ -122,12 +122,23 @@ public class Main {
 
         System.out.println("Heap");
         Heap heap = new Heap();
-        heap.insert(99);
-        heap.insert(72);
-        heap.insert(61);
-        heap.insert(58);
+        heap.insert(95);
+        heap.insert(75);
+        heap.insert(80);
+        heap.insert(55);
+        heap.insert(60);
+        heap.insert(50);
+        heap.insert(65);
         System.out.println(heap.getHeap());
+
+        //todo remove value from heap i.e element at index 0
+        heap.remove();
+        System.out.println(heap.getHeap());
+        //output
+       // [95, 75, 80, 55, 60, 50, 65]
+        // [80, 75, 65, 55, 60, 50]
+
+        //todo: insert
         heap.insert(120);
-        System.out.println(heap.getHeap());
         }
 }
