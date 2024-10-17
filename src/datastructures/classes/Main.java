@@ -149,6 +149,7 @@ public class Main {
         myDll.append(8);
         myDll.append(9);
         myDll.removeLast();
+      //  System.out.println(myDll.removeLast().value);
         myDll.prinList();
         }
 }
