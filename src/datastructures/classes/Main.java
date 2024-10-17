@@ -137,8 +137,13 @@ public class Main {
         //output
        // [95, 75, 80, 55, 60, 50, 65]
         // [80, 75, 65, 55, 60, 50]
-
         //todo: insert
         heap.insert(120);
+
+        System.out.println("Doubly linked list");
+        DoublyLinkedList myDll = new DoublyLinkedList(7);
+        myDll.getHead();
+        myDll.getTail();
+        myDll.getLength();
         }
 }
