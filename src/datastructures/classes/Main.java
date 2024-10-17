@@ -148,6 +148,8 @@ public class Main {
       //  myDll.getLength();
         myDll.append(8);
         myDll.append(9);
+        //todo: prepend
+        myDll.prepend(10);
         myDll.removeLast();
       //  System.out.println(myDll.removeLast().value);
         myDll.prinList();
