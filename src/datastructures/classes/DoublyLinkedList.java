@@ -40,6 +40,23 @@ public class DoublyLinkedList {
         length++;
     }
 
+    public Node removeLast(){
+        Node temp = tail;
+        if(length == 0) {
+            return null;
+        }else {
+            tail = tail.prev;
+            tail.next = null;
+            temp.prev = null; //disconnect arrow that pointed back to prev node
+        }
+        length--;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        }
+        return temp;
+    }
+
     public void prinList(){
         Node temp = head;
         while(temp != null){

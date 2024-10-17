@@ -147,6 +147,8 @@ public class Main {
        // myDll.getTail();
       //  myDll.getLength();
         myDll.append(8);
+        myDll.append(9);
+        myDll.removeLast();
         myDll.prinList();
         }
 }
