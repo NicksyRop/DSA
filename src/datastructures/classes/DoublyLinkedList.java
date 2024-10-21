@@ -117,6 +117,33 @@ public class DoublyLinkedList {
         return false;
     }
 
+    public boolean inser(int index, int value){
+        if(index < 0 || index >= length) {
+            return false;
+        }
+
+        if (index == 0 ) { // if index is 0 call prepend method
+            prepend(value);
+            return true;
+        }
+
+        if(index == length-1) { //if index is at the end
+            append(value);
+            return true;
+        }
+
+        //todo: insert at the middle , use two vars after and before
+        Node newNode = new Node(value);
+        Node before = get(index-1); // Node before the position of the index we want to return
+        Node after = before.next; // get is o(n) hence use .next which is o(1) to get after
+        newNode.prev = before;
+        newNode.next = after;
+        before.next = newNode;
+        after.prev = newNode;
+        length ++;
+        return true;
+    }
+
     public void prinList(){
         Node temp = head;
         while(temp != null){
