@@ -84,6 +84,29 @@ public class DoublyLinkedList {
         length++;
     }
 
+    public Node get(int index){
+        if(index < 0 || index >= length) { //check if index is within valid range
+            return null;
+        }
+        Node temp = head;
+        //todo: double linked list we can move forward or backwards , hence it is efficient if we use forward if the
+       // todo  item is within the first half otherwise loop from the end , hence we need to check if index is less than
+        //todo:  half the length
+
+        if( index < length/2) {
+            for (int i = 0; i < index; i++) { //use for loop to move temp upto the last index
+                temp = temp.next;
+            }
+        } else {
+            //todo set temp to point to tail so we can move to the left
+            temp = tail;
+            for(int i = length-1; i > index; i--) {
+                temp = temp.prev;
+            }
+        }
+        return temp;
+    }
+
     public void prinList(){
         Node temp = head;
         while(temp != null){

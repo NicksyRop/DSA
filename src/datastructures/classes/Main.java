@@ -152,6 +152,10 @@ public class Main {
         myDll.prepend(10);
         myDll.removeLast();
         myDll.renoveFirst();
+        myDll.append(9);
+        myDll.append(10);
+        //todo: get element
+        System.out.println("element at index zero :" +myDll.get(0).value);
       //  System.out.println(myDll.removeLast().value);
         myDll.prinList();
         }
