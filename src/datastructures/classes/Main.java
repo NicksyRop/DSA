@@ -151,6 +151,7 @@ public class Main {
         //todo: prepend
         myDll.prepend(10);
         myDll.removeLast();
+        myDll.renoveFirst();
       //  System.out.println(myDll.removeLast().value);
         myDll.prinList();
         }

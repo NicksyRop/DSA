@@ -57,6 +57,20 @@ public class DoublyLinkedList {
         return temp;
     }
 
+    public Node renoveFirst(){
+        Node temp = head;
+        if(length == 0) {
+            return null;
+        }else {
+
+            head = head.next;
+            head.prev = null;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
+
     public void prepend(int value) {
         Node newNode = new Node(value);
         if(length == 0) {
