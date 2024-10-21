@@ -159,6 +159,7 @@ public class Main {
       //  System.out.println(myDll.removeLast().value);
         System.out.println("Set index 0 to 30 :" + myDll.set(0,30) );
         System.out.println("insert at 1" + myDll.inser(1,20));
+        System.out.println("Remove at one" + myDll.remove(1));
         myDll.prinList();
         }
 }

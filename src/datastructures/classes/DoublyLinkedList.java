@@ -144,6 +144,28 @@ public class DoublyLinkedList {
         return true;
     }
 
+    public Node remove(int index){
+        if(index < 0 || index >= length) { //check if index is within
+            return null;
+        }
+        if(index == 0 ) { //if we are removing index at 0 call renoveFirst method
+           return renoveFirst();
+        }
+        if(index == length-1) { //if we are removing index at tail call removeLast method
+            return removeLast();
+        }
+
+        //todo: remove node at the middle
+        // since we will retun the node we need variable to point to it
+        Node temp = get(index);
+        temp.next.prev = temp.prev;
+        temp.prev.next = temp.next;
+        temp.next = null;
+        temp.prev = null;
+        length--;
+        return temp;
+    }
+
     public void prinList(){
         Node temp = head;
         while(temp != null){
