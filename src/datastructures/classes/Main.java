@@ -157,6 +157,7 @@ public class Main {
         //todo: get element
         System.out.println("element at index zero :" +myDll.get(0).value);
       //  System.out.println(myDll.removeLast().value);
+        System.out.println("Set index 0 to 30 :" + myDll.set(0,30) );
         myDll.prinList();
         }
 }
