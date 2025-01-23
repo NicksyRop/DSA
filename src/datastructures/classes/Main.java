@@ -161,5 +161,9 @@ public class Main {
         System.out.println("insert at 1" + myDll.inser(1,20));
         System.out.println("Remove at one" + myDll.remove(1));
         myDll.prinList();
+
+        System.out.println("Hash table");
+        HashTable myHash = new HashTable();
+        myHash.printTable();
         }
 }

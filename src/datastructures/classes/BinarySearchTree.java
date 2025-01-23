@@ -1,5 +1,9 @@
 package datastructures.classes;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author nnkipkorir
  * created 11/10/2024
@@ -72,5 +76,53 @@ public class BinarySearchTree {
 
             }
         }
+    }
+
+    /**
+     * Breadth first search
+     * @param root
+     * @return
+     */
+    public ArrayList<Integer> BFS(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            Node temp = queue.remove();
+            result.add(temp.value);
+
+            //check if we have left
+            if(temp.left != null) {
+                queue.add(temp.left);
+            }
+            //check if we have right
+            if(temp.right != null) {
+                queue.add(temp.right);
+            }
+
+        }
+
+        return result;
+    }
+
+    public ArrayList<Integer> DFSPreOrder(Node root) {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                results.add(currentNode.value);
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
+
+        return results;
     }
 }
